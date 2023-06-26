@@ -1,12 +1,12 @@
 ;; Recreation of the app Launchy. Create text searchable application shortcuts
 
-
 #HotIf !WinExist("Launchy ahk_exe AutoHotkey64.exe")
 	!Space::runLaunchy()
 #HotIf
 
-QuickLinks := Map()
+;; .conf example:
 ; [term] : [Run Cmd], [Args]
+QuickLinks := Map()
 Loop read ("launchy.conf"){
 	temp := StrSplit(A_LoopReadLine, ":"," `t", 2)
 	if(temp.Length == 2){
@@ -14,7 +14,7 @@ Loop read ("launchy.conf"){
 	}
 }
 
-AllOptions := QuickLinks.keys()
+AllOptions := QuickLinks.keys().reverse()
 currOpts := []
 
 closeLaunchy(*){
