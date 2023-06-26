@@ -103,6 +103,13 @@ keymap(obj, func){
 	}
 	return res
 }
+reverse(obj){
+	res := []
+	For key,val in iter(obj){
+		res.InsertAt(1, val)
+	}
+	return res
+}
 
 
 setPrototypes(obj, methods){
@@ -113,4 +120,4 @@ setPrototypes(obj, methods){
 
 
 setPrototypes(Object, [keymap,keys,values,entries])
-setPrototypes(Array,  [each,reduce,join,sort,filter])
+setPrototypes(Array,  [each,reduce,join,sort,filter,reverse])
