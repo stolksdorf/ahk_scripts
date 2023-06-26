@@ -1,0 +1,12 @@
+;; Wiggles mouse every 3min to prevent screen locks
+
+MINUTE := 60*1000
+SetTimer(shimmy, 3*MINUTE)
+shimmy(){
+	if(A_TimeIdle > 5*MINUTE){
+		SendMode("Event")
+		MouseMove(50,50,5,"R")
+		MouseMove(-50,-50,5,"R")
+		SendMode("Input")
+	}
+}
