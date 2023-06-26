@@ -1,6 +1,7 @@
 #SingleInstance force
 SetWorkingDir A_ScriptDir
 SendMode "Input"
+FileEncoding("UTF-8")
 
 #Include prototypes.ahk
 #Include dev.ahk
