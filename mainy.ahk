@@ -12,11 +12,11 @@ FileEncoding("UTF-8")
 #Include spellbank.ahk
 
 #Include shimmy.ahk
+;#Include marble_scroll.ahk
+
 #Include divvy.ahk
 #Include launchy.ahk
 #Include cappy.ahk
-
-#Include pulse_connect.ahk
 
 ^F12::{
 	TrayTip("Scripts Disabled","", "Iconi Mute")
